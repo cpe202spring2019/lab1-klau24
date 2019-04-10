@@ -49,6 +49,7 @@ class TestLab1(unittest.TestCase):
 
         self.assertEqual(bin_search(2, 1, 7, list_val), 2 ) #Testing with random high low values containing target
         self.assertEqual(bin_search(25, 2, 4, list_val2), 4 ) #Testing with random high low values containing target
+        self.assertEqual(bin_search(10, 0, 4, list_val2), 1 ) #Testing with random high low values containing target
 
         self.assertEqual(bin_search(5, 0, 3, list_val2), 0 ) #Test number at beginning of list
         self.assertEqual(bin_search(30, 0, len(list_val2)-1, list_val2), 5 ) #Test number at the end of list
