@@ -46,6 +46,11 @@ class TestLab1(unittest.TestCase):
         list_val3 = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
         low = 0
         high = len(list_val)-1
+
+        tlist = None
+        with self.assertRaises(ValueError): #Test if function raises error for a None list
+            bin_search(5, low, high, tlist)
+
         self.assertEqual(bin_search(4, 0, len(list_val)-1, list_val), 4 ) #Testing normal case in middle
 
         self.assertEqual(bin_search(8, 2, 4, list_val), None ) #Testing with random high low values that do not contain target
