@@ -23,6 +23,8 @@ class TestLab1(unittest.TestCase):
 
         self.assertEqual(max_list_iter([]), None) #Testing empty list
 
+        self.assertEqual(max_list_iter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), 10) #Longer list
+
     def test_reverse_rec(self):
         tlist = None
         with self.assertRaises(ValueError): #Test if function raises error for a None list
